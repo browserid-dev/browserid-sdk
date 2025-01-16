@@ -5,7 +5,7 @@ import { DeviceNotRegisteredError } from "../errors";
 
 /**
  * Creates and signs a timestamped challenge for authentication.
- * 
+ *
  * @returns {Promise<CreateChallengeResponse>} Object containing:
  *  - challenge: Base64URL-encoded challenge string
  *  - signature: Cryptographic signature
@@ -15,22 +15,22 @@ import { DeviceNotRegisteredError } from "../errors";
  * @throws {DeviceNotRegisteredError} If no valid keys are found
  */
 export const createChallenge = async (): Promise<CreateChallengeResponse> => {
-    try {
-        const array = new Uint8Array(32);
-        crypto.getRandomValues(array);
-        const challenge = base64UrlEncode(array);
+  try {
+    const array = new Uint8Array(32);
+    crypto.getRandomValues(array);
+    const challenge = base64UrlEncode(array);
 
-        const { signature, userId, deviceId } = await signChallenge(challenge);
-        return {
-            challenge,
-            signature,
-            userId,
-            deviceId
-        }
-    } catch (error) {
-        if (error instanceof DeviceNotRegisteredError) {
-            throw error;
-        }
-        throw error;
+    const { signature, userId, deviceId } = await signChallenge(challenge);
+    return {
+      challenge,
+      signature,
+      userId,
+      deviceId,
+    };
+  } catch (error) {
+    if (error instanceof DeviceNotRegisteredError) {
+      throw error;
     }
-}
+    throw error;
+  }
+};

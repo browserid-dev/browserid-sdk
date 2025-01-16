@@ -7,14 +7,10 @@ import { createKeypair } from "./libs/trust-browser";
 import { unlinkBrowser } from "./libs/unlink-browser";
 
 export const frontend = {
-    createKeypair,
-    createChallenge,
-    unlinkBrowser,
-    getCreds
-}
+  createKeypair,
+  createChallenge,
+  unlinkBrowser,
+  getCreds,
+};
 
-export {
-    Backend,
-    GoodConditionsError,
-    ErrorCode
-}
+export { Backend, GoodConditionsError, ErrorCode };

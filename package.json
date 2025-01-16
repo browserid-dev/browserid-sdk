@@ -1,34 +1,35 @@
 {
-    "name": "@browserid/sdk",
-    "version": "0.0.1",
-    "description": "Passive, privacy-friendly browser identification.",
-    "type": "module",
-    "main": "dist/index.js",
-    "module": "dist/index.esm.js",
-    "types": "dist/index.d.ts",
-    "scripts": {
-        "build": "rollup -c",
-        "test": "jest",
-        "prepublishOnly": "npm run build",
-        "publish": "npm publish --access public"
-    },
-    "keywords": [
-        "zero trust",
-        "authentication",
-        "security",
-        "privacy"
-    ],
-    "author": "Charl Kruger",
-    "license": "MIT",
-    "devDependencies": {
-        "@rollup/plugin-typescript": "^8.3.0",
-        "@types/jest": "^27.0.3",
-        "jest": "^27.4.5",
-        "rollup": "^2.60.2",
-        "ts-jest": "^27.1.2",
-        "typescript": "^4.5.4"
-    },
-    "dependencies": {
-        "tslib": "^2.7.0"
-    }
+  "name": "@browserid/sdk",
+  "version": "0.0.1",
+  "description": "Passive, privacy-friendly browser identification.",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "jest",
+    "prepublishOnly": "npm run build",
+    "publish": "npm publish --access public"
+  },
+  "keywords": [
+    "zero trust",
+    "authentication",
+    "security",
+    "privacy"
+  ],
+  "author": "Charl Kruger",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.3.0",
+    "@types/jest": "^27.0.3",
+    "jest": "^27.4.5",
+    "prettier": "3.4.2",
+    "rollup": "^2.60.2",
+    "ts-jest": "^27.1.2",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "tslib": "^2.7.0"
+  }
 }
